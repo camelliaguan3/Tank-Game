@@ -15,7 +15,7 @@ I wanted to put my coding skills in practice over the summer and create my very 
 
 *Due: June 17, 2022*
 
-> &cross; Create main function & start_game() function
+> &check; Create main function & start_game() function
 
 > &cross; Create TankGame and Tank classes & create `__init__` functions for each
 
@@ -24,6 +24,8 @@ I wanted to put my coding skills in practice over the summer and create my very 
 *Due: June 24, 2022*
 
 > &cross; Create some functions for Tank that are not dependent on interface (i.e. adjusting the aim/power, taking down health, etc.)
+
+> &cross; Complete start_game() function
 
 > &cross; Research creating an interface for the game
 
