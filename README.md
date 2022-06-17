@@ -11,13 +11,15 @@ I wanted to put my coding skills in practice over the summer and create my very 
 
 ## Milestones
 
+The *Milestones* section outlines each milestone and their due dates.
+
 **Milestone 1**
 
 *Due: June 17, 2022*
 
-> &check; Create main function & start_game() function
+> &check; Create `main` function & `start_game()` function
 
-> &cross; Create TankGame and Tank classes & create `__init__` functions for each
+> &check; Create TankGame and Tank classes & create `__init__` functions for each
 
 **Milestone 2**
 
@@ -25,7 +27,7 @@ I wanted to put my coding skills in practice over the summer and create my very 
 
 > &cross; Create some functions for Tank that are not dependent on interface (i.e. adjusting the aim/power, taking down health, etc.)
 
-> &cross; Complete start_game() function
+> &cross; Complete `start_game()` function
 
 > &cross; Research creating an interface for the game
 
@@ -78,3 +80,15 @@ I wanted to put my coding skills in practice over the summer and create my very 
 *Due: August 19, 2022*
 
 > &cross; Complete game :D
+
+<br>
+
+## Design Choices
+
+The *Design Choices* section explains any choices that I may have made in changing certain parts of the project.
+
+<br>
+
+## Citations
+
+The *Citations* section cites any outside sources that I may have used throughout the project and also describes the part of the project the source was used for.

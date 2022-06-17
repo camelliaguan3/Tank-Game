@@ -7,6 +7,10 @@ Author: Camellia Guan
 Start Date: June 10, 2022
 End Date: N/A
 
+
+This module contains the model classes for the TankGame. The player interacts with 
+models on the screen, including the Tank and any obstacles.
+
 '''
 
 class Tank:
@@ -17,17 +21,21 @@ class Tank:
     Class attributes: 
 
     Instance attributes:
-    - angle: the angle of the tank gun [float between 0 and 180 inclusive]
-    - power: the power of the projectile [float between 0 and 100 inclusive]
-    -
-
+    - _angle: the angle of the tank gun [float between 0 and 180 inclusive]
+    - _power: the power of the projectile [float between 0 and 100 inclusive]
+    - _health: the number of hitpoints [float between 0 and 100 inclusive]
+    - _isDead: True if tank has 0 hitpoints, False if not [boolean]
+    - _name: the name of the player that controls the tank [string]
     """
 
-    def __init__(self):
+    def __init__(self, tankName):
         """
-        Initializes a new TankGame. 
+        Initializes a new Tank. 
 
         Returns None.
         """
-        self.power = 0.0
-        self.angle = 0.0
+        self._power = 0.0
+        self._angle = 0.0
+        self._health = 100.0
+        self._isDead = False
+        self._name = tankName

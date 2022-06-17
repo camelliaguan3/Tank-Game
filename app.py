@@ -7,6 +7,9 @@ Author: Camellia Guan
 Start Date: June 10, 2022
 End Date: N/A
 
+
+This module contains the main controller class for TankGame.
+
 '''
 
 class TankGame:
@@ -20,8 +23,10 @@ class TankGame:
     Class attributes: 
 
     Instance attributes:
-    - game_turn: the current turn of the instance [int, greater than 0]
-    - tank_turn: the turn of a tank (if True, then Tank 1; if False, then Tank 2) [boolean]
+    - width: the width of the game [int]
+    - height: the height of the game [int]
+    - _gameTurn: the current turn of the instance [int, greater than 0]
+    - _tankTurn: the turn of a tank (if True, then Tank 1; if False, then Tank 2) [boolean]
 
     """
 
@@ -31,4 +36,5 @@ class TankGame:
 
         Returns None.
         """
-        self.game_turn = 1
+        self._gameTurn = 1
+        self._tankTurn = True

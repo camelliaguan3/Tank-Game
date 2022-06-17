@@ -9,7 +9,7 @@ End Date: N/A
 
 '''
 
-import TankGame, Tank
+from app import *
 
 def start_game():
     """
