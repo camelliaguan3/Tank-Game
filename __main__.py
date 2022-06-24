@@ -9,6 +9,7 @@ End Date: N/A
 
 '''
 
+from kivy.app import *
 from app import *
 
 def start_game():
@@ -20,7 +21,8 @@ def start_game():
     print("Game Started...")
 
     # initialize an instance of TankGame and start the game.
-
+    
+    TankGame(width=1024, height=896).run()
     
 
 if __name__ == "__main__":

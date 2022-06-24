@@ -12,7 +12,10 @@ This module contains the main controller class for TankGame.
 
 '''
 
-class TankGame:
+from game2d import *
+from kivy.app import App
+
+class TankGame(GameApp):
     """
     Initializing a new instance of TankGame creates a tanks game for two players. 
     Each player is able to aim their tank gun via angle and power, and when ready, 
@@ -30,7 +33,7 @@ class TankGame:
 
     """
 
-    def __init__(self):
+    def start(self):
         """
         Initializes a new TankGame. 
 
@@ -38,3 +41,6 @@ class TankGame:
         """
         self._gameTurn = 1
         self._tankTurn = True
+
+        self.width = 1024
+        self.height = 896

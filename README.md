@@ -35,9 +35,9 @@ The *Milestones* section outlines each milestone and their due dates.
 
 > &check; Create some functions for Tank that are not dependent on interface (i.e. adjusting the aim/power, taking down health, etc.)
 
-> &cross; Complete `start_game()` function
+> &check; Complete `start_game()` function
 
-> &cross; Research creating an interface for the game
+> &check; Research creating an interface for the game
 
 **Milestone 3**
 
@@ -95,7 +95,7 @@ The *Milestones* section outlines each milestone and their due dates.
 
 The *Design Choices* section explains any choices that I may have made in changing certain parts of the project or any parts of the project that required outside sources.
 
-**Milestone 2:** I decided to utilize Kivy, a Python framework that allows programmers to create a natural user interface that is platform-independent, meaning that the interface doesn't change, even when used on a different operating system or platform. Because Walker White created a GameApp module for Kivy, I utlized that in order to create the TankGame. Kivy requires  Because I am unfamiliar with the framework, Milestones 3 and 4 will likely take an extended amount of time to complete.
+**Milestone 2:** I decided to utilize Kivy, a Python framework that allows programmers to create a natural user interface that is platform-independent, meaning that the interface doesn't change, even when used on a different operating system or platform. Because Walker White created a GameApp module for Kivy, I utlized that in order to create the TankGame. I also imported the introcs module, which the GameApp module is dependent on. Kivy requires an installation via pip. Because I am unfamiliar with the framework, Milestones 3 and 4 will likely take an extended amount of time to complete.
 
 <br>
 
@@ -105,4 +105,4 @@ The *Citations* section cites any outside sources that I may have used throughou
 
 | Project Section | Description of Section | Source |
 | - | - | - |
-| game2d Folder | Interface and Game Mechanics | Walker White, Cornell University's Department of Computer Science |
+| game2d Folder | Interface | Walker White, Cornell University's Department of Computer Science |
