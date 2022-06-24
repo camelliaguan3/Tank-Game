@@ -39,3 +39,44 @@ class Tank:
         self._health = 100.0
         self._isDead = False
         self._name = tankName
+
+    def set_aim(self, power, angle):
+        """
+        Changes the power and angle of the tank gun.
+
+        Returns None.
+        """
+        self._power = power
+        self._angle = angle
+
+    def get_aim(self):
+        """
+        Returns the power and angle of the tank gun [tuple].
+        """
+        return (self._power, self._angle)
+
+    def change_health(self, damage):
+        """
+        Removes health from tank.
+
+        Returns the new health of the tank [float >= 0.0].
+        """
+        self._health -= damage
+
+        if self._health <= 0.0:
+            self._health = 0.0
+            self._isDead = True
+
+        return self._health
+
+    def get_health(self):
+        """
+        Returns the health of the tank [float].
+        """
+        return self._health
+
+    def get_isdead(self):
+        """
+        Returns the live status of the tank [boolean].
+        """
+        return self._isDead

@@ -25,7 +25,7 @@ The *Milestones* section outlines each milestone and their due dates.
 
 *Due: June 24, 2022*
 
-> &cross; Create some functions for Tank that are not dependent on interface (i.e. adjusting the aim/power, taking down health, etc.)
+> &check; Create some functions for Tank that are not dependent on interface (i.e. adjusting the aim/power, taking down health, etc.)
 
 > &cross; Complete `start_game()` function
 
