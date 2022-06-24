@@ -9,6 +9,14 @@ I wanted to put my coding skills in practice over the summer and create my very 
 
 <br>
 
+## How to Run the Game
+
+1. Install Kivy, NumPy, and introcs.
+
+2. Run `python ../Tank-Game` while in the Tank-Game folder.
+
+<br>
+
 ## Milestones
 
 The *Milestones* section outlines each milestone and their due dates.
@@ -85,10 +93,16 @@ The *Milestones* section outlines each milestone and their due dates.
 
 ## Design Choices
 
-The *Design Choices* section explains any choices that I may have made in changing certain parts of the project.
+The *Design Choices* section explains any choices that I may have made in changing certain parts of the project or any parts of the project that required outside sources.
+
+**Milestone 2:** I decided to utilize Kivy, a Python framework that allows programmers to create a natural user interface that is platform-independent, meaning that the interface doesn't change, even when used on a different operating system or platform. Because Walker White created a GameApp module for Kivy, I utlized that in order to create the TankGame. Kivy requires  Because I am unfamiliar with the framework, Milestones 3 and 4 will likely take an extended amount of time to complete.
 
 <br>
 
 ## Citations
 
 The *Citations* section cites any outside sources that I may have used throughout the project and also describes the part of the project the source was used for.
+
+| Project Section | Description of Section | Source |
+| - | - | - |
+| game2d Folder | Interface and Game Mechanics | Walker White, Cornell University's Department of Computer Science |
