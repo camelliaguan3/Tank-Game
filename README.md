@@ -11,9 +11,11 @@ I wanted to put my coding skills in practice over the summer and create my very 
 
 ## How to Run the Game
 
-1. Install Kivy, NumPy, and introcs.
+1. Install Kivy.
 
-2. Run `python ../Tank-Game` while in the Tank-Game folder.
+2. Enter the Kivy virtual environment and install NumPy and introcs.
+
+3. Run `python ../Tank-Game` while in the Tank-Game folder.
 
 <br>
 
@@ -43,9 +45,9 @@ The *Milestones* section outlines each milestone and their due dates.
 
 *Due: July 01, 2022*
 
-> &cross; Begin creating interface for game
+> &check; Begin creating interface for game
 
-> &cross; Create designs with iPad for game (sprites and background)
+> &check; Create designs with iPad for game (sprites and background)
 
 **Milestone 4**
 
@@ -101,7 +103,7 @@ The *Design Choices* section explains any choices that I may have made in changi
 
 ## Citations
 
-The *Citations* section cites any outside sources that I may have used throughout the project and also describes the part of the project the source was used for.
+The *Citations* section cites any outside sources that I may have used throughout the project and also describes the part of the project the source was used for. All images were drawn myself (via Piskel).
 
 | Project Section | Description of Section | Source |
 | - | - | - |
