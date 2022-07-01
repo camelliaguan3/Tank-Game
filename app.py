@@ -14,6 +14,7 @@ This module contains the main controller class for TankGame.
 
 from game2d import *
 from kivy.app import App
+from consts import *
 
 class TankGame(GameApp):
     """
@@ -42,5 +43,7 @@ class TankGame(GameApp):
         self._gameTurn = 1
         self._tankTurn = True
 
-        self.width = 1024
-        self.height = 896
+        self.width = GAME_WIDTH
+        self.height = GAME_HEIGHT
+
+        

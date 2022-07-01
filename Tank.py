@@ -12,6 +12,7 @@ This module contains the model classes for the TankGame. The player interacts wi
 models on the screen, including the Tank and any obstacles.
 
 '''
+from consts import *
 
 class Tank:
     """
