@@ -142,8 +142,8 @@ class TankGame(GameApp):
         yPos2 = yPos1 # depends on first tank
 
         # CREATING TANK OBJECTS
-        self._tankOne = Tank(xPos1, yPos1)
-        self._tankTwo = Tank(xPos2, yPos2)
+        self._tankOne = Tank('Tank One', xPos1, yPos1)
+        self._tankTwo = Tank('Tank Two', xPos2, yPos2)
 
         # ADDING BACKGROUND AND OBSTACLE
 

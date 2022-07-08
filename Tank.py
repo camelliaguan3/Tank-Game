@@ -13,8 +13,9 @@ models on the screen, including the Tank and any obstacles.
 
 '''
 from consts import *
+from game2d import *
 
-class Tank:
+class Tank(GImage):
     """
     Initializing a new instance of Tank creates a tank with a set amount of health.
     This tank is able to aim and use different amounts of power to shoot a projectile.
