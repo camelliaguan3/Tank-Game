@@ -99,6 +99,10 @@ The *Design Choices* section explains any choices that I may have made in changi
 
 **Milestone 2:** I decided to utilize Kivy, a Python framework that allows programmers to create a natural user interface that is platform-independent, meaning that the interface doesn't change, even when used on a different operating system or platform. Because Walker White created a GameApp module for Kivy, I utlized that in order to create the TankGame. I also imported the introcs module, which the GameApp module is dependent on. Kivy requires an installation via pip. Because I am unfamiliar with the framework, Milestones 3 and 4 will likely take an extended amount of time to complete.
 
+**Milestone 4:** A problem I ran into straight away with the tank sprite was how to get the tank gun to turn with exact angles. A primitive solution could be to add in sprites for each increment of 10 degrees, but this wouldn't satisfy the scenarios in between, such as something like 10.5 degrees or 65.0 degrees. So, currently, to keep up with milestones, I think that it may be more suitable to have one sprite of the tank. The gun will not physically move when the angle is changed, but this will be adjusted if time permits. I also may change the design of the tank to be something like a cannon if time permits depending on which design I am more in favor of.
+
+During this milestone, I realized that there would likely need to be another class to manage any obstacles on the screen, so that will be created in a future milestone.
+
 <br>
 
 ## Citations

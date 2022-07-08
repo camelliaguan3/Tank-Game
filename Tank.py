@@ -27,9 +27,11 @@ class Tank:
     - _health: the number of hitpoints [float between 0 and 100 inclusive]
     - _isDead: True if tank has 0 hitpoints, False if not [boolean]
     - _name: the name of the player that controls the tank [string]
+    - _xPos: the x-coordinate of the tank [float]
+    - _yPos: the y-coordinate of the tank [float]
     """
 
-    def __init__(self, tankName):
+    def __init__(self, tankName, xPos, yPos):
         """
         Initializes a new Tank. 
 
@@ -40,6 +42,8 @@ class Tank:
         self._health = 100.0
         self._isDead = False
         self._name = tankName
+        self._xPos = xPos
+        self._yPos = yPos
 
     def set_aim(self, power, angle):
         """
