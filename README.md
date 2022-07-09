@@ -53,7 +53,7 @@ The *Milestones* section outlines each milestone and their due dates.
 
 *Due: July 08, 2022*
 
-> &cross; Complete prototypes for interface & designs
+> &check; Complete prototypes for interface & designs
 
 **Milestone 5**
 

@@ -59,9 +59,8 @@ class TankGame(GameApp):
         self.lastKeys = 0
 
         # BACKGROUND
-        self._background = GImage(width=GAME_WIDTH,height=GAME_HEIGHT,source='background.png',
+        self._background = GImage(width=GAME_WIDTH,height=GAME_HEIGHT,source='background1.png',
             x=GAME_WIDTH/2,y=GAME_HEIGHT/2)
-        self._tankBack = GTile(width=100,height=100,source='tank.png')
 
         # TITLE
         self._title = GLabel(text='tanks',font_size=LARGE_FONT,font_name=VONIQUE,
@@ -103,6 +102,14 @@ class TankGame(GameApp):
             self._background.draw(self.view)
             self._title.draw(self.view)
             self._textDesc.draw(self.view)
+        
+        elif self._state == STATE_LOADING:
+            pass # want to make a loading screen that lasts around 2 seconds?
+        
+        elif self._state == STATE_ACTIVE:
+            self._background.draw(self.view)
+            self._tankOne.draw(self.view)
+            self._tankTwo.draw(self.view)
 
 
 
@@ -137,16 +144,17 @@ class TankGame(GameApp):
         # CREATING TANK POSITIONS
         spacing = 5
         xPos1 = GAME_WIDTH / spacing # depends on the screen's size
-        yPos1 = GAME_HEIGHT # depends on the screen's size
+        yPos1 = GAME_HEIGHT / 3.25 # depends on the screen's size
         xPos2 = xPos1 * (spacing - 1) # depends on first tank
         yPos2 = yPos1 # depends on first tank
 
         # CREATING TANK OBJECTS
-        self._tankOne = Tank('Tank One', xPos1, yPos1)
-        self._tankTwo = Tank('Tank Two', xPos2, yPos2)
+        self._tankOne = Tank('Tank One', xPos1, yPos1, 'tank1.png')
+        self._tankTwo = Tank('Tank Two', xPos2, yPos2, 'tank2.png')
 
         # ADDING BACKGROUND AND OBSTACLE
-
+        self._background = GImage(width=GAME_WIDTH,height=GAME_HEIGHT,source='background2.png',
+            x=GAME_WIDTH/2,y=GAME_HEIGHT/2)
 
         # CHANGING STATE
         self._state = STATE_ACTIVE

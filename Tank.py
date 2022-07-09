@@ -30,9 +30,11 @@ class Tank(GImage):
     - _name: the name of the player that controls the tank [string]
     - _xPos: the x-coordinate of the tank [float]
     - _yPos: the y-coordinate of the tank [float]
+    - _image: the image file associated with the tank [string, ends in '.png']
+    - _tank: the tank displayed in the game [GImage]
     """
 
-    def __init__(self, tankName, xPos, yPos):
+    def __init__(self, tankName, xPos, yPos, image):
         """
         Initializes a new Tank. 
 
@@ -45,6 +47,10 @@ class Tank(GImage):
         self._name = tankName
         self._xPos = xPos
         self._yPos = yPos
+        self._image = image
+
+        self._tank = GImage(width=GRID_SIZE * 2,height=GRID_SIZE * 2,source=self._image,
+            x=self._xPos,y=self._yPos)
 
     def set_aim(self, power, angle):
         """
@@ -86,3 +92,6 @@ class Tank(GImage):
         Returns the live status of the tank [boolean].
         """
         return self._isDead
+
+    def draw(self, view):
+        self._tank.draw(view)
