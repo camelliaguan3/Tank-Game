@@ -94,4 +94,9 @@ class Tank(GImage):
         return self._isDead
 
     def draw(self, view):
+        """
+        Drews the game objects. 
+
+        Returns None.
+        """
         self._tank.draw(view)

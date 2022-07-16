@@ -16,6 +16,7 @@ from game2d import *
 from kivy.app import App
 from consts import *
 from tank import *
+from level import *
 import introcs
 
 class TankGame(GameApp):
@@ -32,13 +33,14 @@ class TankGame(GameApp):
     - width: the width of the game [int]
     - height: the height of the game [int]
     - lastKeys: the number of keys pressed in the previous animation frame [int, greater than 0]
+    - _level: the subcontroller of the TankGame, managing the game after the welcome screen 
+       is dismissed [None or Level object]
     - _gameTurn: the current turn of the instance [int, greater than 0]
     - _tankTurn: the turn of a tank (if True, then Tank 1; if False, then Tank 2) [boolean]
     - _state: the current state of the game (from consts.py) [int, must be from consts.py]
     - _title: the title of the game [GLabel]
     - _textDesc: text displayed in the game [GLabel]
-    - _tankOne: the subcontroller for a tank [None or Tank object]
-    - _tankTwo: the subcontroller for a tank [None or Tank object]
+    - _background: the background of the game [GImage]
     """
 
     def start(self):
@@ -71,6 +73,9 @@ class TankGame(GameApp):
             font_name=VONIQUE, linecolor=introcs.RGB(205,205,255),x=GAME_WIDTH/2,
             y=GAME_HEIGHT/2.5)
 
+        # LEVEL
+        self._level = None
+
     
     def update(self, dt):
         """
@@ -79,10 +84,10 @@ class TankGame(GameApp):
         Returns None.
         """
         if self._state == STATE_INACTIVE:
-            self._completeWelcome()
+            self._complete_welcome()
 
         elif self._state == STATE_LOADING:
-            self._loadGame()
+            self._load_game()
 
         elif self._state == STATE_ACTIVE:
             pass
@@ -106,16 +111,16 @@ class TankGame(GameApp):
         elif self._state == STATE_LOADING:
             pass # want to make a loading screen that lasts around 2 seconds?
         
-        elif self._state == STATE_ACTIVE:
-            self._background.draw(self.view)
-            self._tankOne.draw(self.view)
-            self._tankTwo.draw(self.view)
+
+        # DRAWING AFTER THE LEVEL HAS BEEN CREATED
+        if self._level != None:
+            self._level.draw(self.view)
 
 
 
     ### HELPER FUNCTIONS ###
 
-    def _completeWelcome(self):
+    def _complete_welcome(self):
         """
         Checks if 's' has been pressed down and removes the Welcome Screen.
 
@@ -135,26 +140,22 @@ class TankGame(GameApp):
         # UPDATE lastKeys
         self.lastKeys = numKeys
 
-    def _loadGame(self):
+    def _load_game(self):
         """
-        Loads the game by calling the Tank class and adding in the background/obstacles.
+        Loads the game by calling the Level class and adding in the background/obstacles.
 
         Returns None.
         """
-        # CREATING TANK POSITIONS
-        spacing = 5
-        xPos1 = GAME_WIDTH / spacing # depends on the screen's size
-        yPos1 = GAME_HEIGHT / 3.25 # depends on the screen's size
-        xPos2 = xPos1 * (spacing - 1) # depends on first tank
-        yPos2 = yPos1 # depends on first tank
-
-        # CREATING TANK OBJECTS
-        self._tankOne = Tank('Tank One', xPos1, yPos1, 'tank1.png')
-        self._tankTwo = Tank('Tank Two', xPos2, yPos2, 'tank2.png')
-
-        # ADDING BACKGROUND AND OBSTACLE
-        self._background = GImage(width=GAME_WIDTH,height=GAME_HEIGHT,source='background2.png',
-            x=GAME_WIDTH/2,y=GAME_HEIGHT/2)
+        # CALLING LEVEL CLASS
+        self._level = Level()
 
         # CHANGING STATE
         self._state = STATE_ACTIVE
+
+    def _move_tank_gun(self, tank, power, angle):
+        """
+        Moves the tank gun's angle and sets the power.
+
+        Returns None.
+        """
+        tank.set_aim(power, angle)
