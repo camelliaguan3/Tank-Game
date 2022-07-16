@@ -59,7 +59,7 @@ The *Milestones* section outlines each milestone and their due dates.
 
 *Due: July 15, 2022*
 
-> &cross; Make progress on Tank class and functions (with specifications)
+> &check; Make progress on Tank class and functions (with specifications)
 > &check; Add Level class and adjust current code to fit new design changes
 
 **Milestone 6**

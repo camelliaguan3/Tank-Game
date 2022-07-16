@@ -93,6 +93,12 @@ class Tank(GImage):
         """
         return self._isDead
 
+    def get_position(self):
+        """
+        Returns the x and y positions of the tank [tuple].
+        """
+        return (self._xPos, self._yPos)
+
     def draw(self, view):
         """
         Drews the game objects. 
