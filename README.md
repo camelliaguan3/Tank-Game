@@ -67,7 +67,7 @@ The *Milestones* section outlines each milestone and their due dates.
 *Due: July 22, 2022*
 
 > &cross; Make progress TankGame class and functions (with specifications)
-> &cross; Add sketches to design folder for welcome screen, game screen, and lose screen
+> &check; Add sketches to design folder for welcome screen, game screen, and lose screen
 
 **Milestone 7**
 
@@ -107,6 +107,8 @@ The *Design Choices* section explains any choices that I may have made in changi
 During this milestone, I realized that there would likely need to be another class to manage any obstacles on the screen, so that will be created in a future milestone.
 
 **Milestone 5:** I modified Milestone 5's goal to make progress on the Tank class rather than complete it, as completing the Tank class requires the game screen and lose screen interface to be designed. I added new goals to future milestones for this and added a design folder for sketches. Another game design change will be to manage a single instance of a game within TankGame. This design change allows for the new class Level to be created, which is called when a new game begins.
+
+**Milestone 6:** Sketches for welcome, gameplay and gameover were added to the sketches folder. 
 
 <br>
 
