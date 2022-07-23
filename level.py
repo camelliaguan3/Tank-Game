@@ -149,3 +149,10 @@ class Level(object):
             angle = angleVector
         
         return (power, angle)
+
+
+    def _is_tank_dead(self):
+        """
+        Returns whether either or of the tanks is dead [boolean].
+        """
+        return self._tankOne.get_isdead() or self._tankTwo.get_isdead()

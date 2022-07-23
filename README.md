@@ -66,7 +66,7 @@ The *Milestones* section outlines each milestone and their due dates.
 
 *Due: July 22, 2022*
 
-> &cross; Make progress TankGame class and functions (with specifications)
+> &check; Make progress TankGame class and functions (with specifications)
 > &check; Add sketches to design folder for welcome screen, game screen, and lose screen
 
 **Milestone 7**
@@ -108,7 +108,7 @@ During this milestone, I realized that there would likely need to be another cla
 
 **Milestone 5:** I modified Milestone 5's goal to make progress on the Tank class rather than complete it, as completing the Tank class requires the game screen and lose screen interface to be designed. I added new goals to future milestones for this and added a design folder for sketches. Another game design change will be to manage a single instance of a game within TankGame. This design change allows for the new class Level to be created, which is called when a new game begins.
 
-**Milestone 6:** Sketches for welcome, gameplay and gameover were added to the sketches folder. I figured out how to calculate the distance between the tank and the mouse cursor to determine the power of the gun, but the angle of the gun seems to be calculated incorrectly from the way that I tried to calculate it, which involves finding the angle between two Vector2 objects.
+**Milestone 6:** Sketches for welcome, gameplay and gameover were added to the sketches folder. I figured out how to calculate the distance between the tank and the mouse cursor to determine the power of the gun, but the angle of the gun seems to be calculated incorrectly from the way that I tried to calculate it, which involves finding the angle between two Vector2 objects. I removed the STATE_PAUSED because it did not make sense for a game that has two players and is local to have a pause feature. Players can technically 'pause' whenever they want by not taking their turn.
 
 <br>
 

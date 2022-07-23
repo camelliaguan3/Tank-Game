@@ -92,10 +92,12 @@ class TankGame(GameApp):
         elif self._state == STATE_ACTIVE:
             self._level.update(self.input, dt, self._tankTurn)
 
-        elif self._state == STATE_PAUSED:
-            pass
+            # CHECK IF GAME SHOULD BE ENDED
+            self._end_game()
+
         elif self._state == STATE_COMPLETE:
-            pass
+            self._display_win()
+            self._play_again()
 
 
     def draw(self):
@@ -153,3 +155,32 @@ class TankGame(GameApp):
 
         # CHANGING STATE
         self._state = STATE_ACTIVE
+
+    
+    def _end_game(self):
+        """
+        Check if the game is over by seeing if any of the tanks are at 0.0 health.
+        Changes state to complete if so.
+
+        Returns None.
+        """
+        pass
+
+
+    def _display_win(self):
+        """
+        If game is over, display which tank has won.
+
+        Returns None.
+        """
+        pass
+
+
+    def _play_again(self):
+        """
+        Resets the entire game if 'y' is pressed, allowing the game to be played again.
+        Otherwise, if 'n' is pressed, the window closes.
+
+        Returns None.
+        """
+        pass
