@@ -90,11 +90,13 @@ class TankGame(GameApp):
             self._load_game()
 
         elif self._state == STATE_ACTIVE:
-            pass
+            self._level.update(self.input, dt, self._tankTurn)
+
         elif self._state == STATE_PAUSED:
             pass
         elif self._state == STATE_COMPLETE:
             pass
+
 
     def draw(self):
         """
@@ -151,11 +153,3 @@ class TankGame(GameApp):
 
         # CHANGING STATE
         self._state = STATE_ACTIVE
-
-    def _move_tank_gun(self, tank, power, angle):
-        """
-        Moves the tank gun's angle and sets the power.
-
-        Returns None.
-        """
-        tank.set_aim(power, angle)

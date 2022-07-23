@@ -108,7 +108,7 @@ During this milestone, I realized that there would likely need to be another cla
 
 **Milestone 5:** I modified Milestone 5's goal to make progress on the Tank class rather than complete it, as completing the Tank class requires the game screen and lose screen interface to be designed. I added new goals to future milestones for this and added a design folder for sketches. Another game design change will be to manage a single instance of a game within TankGame. This design change allows for the new class Level to be created, which is called when a new game begins.
 
-**Milestone 6:** Sketches for welcome, gameplay and gameover were added to the sketches folder. 
+**Milestone 6:** Sketches for welcome, gameplay and gameover were added to the sketches folder. I figured out how to calculate the distance between the tank and the mouse cursor to determine the power of the gun, but the angle of the gun seems to be calculated incorrectly from the way that I tried to calculate it, which involves finding the angle between two Vector2 objects.
 
 <br>
 

@@ -14,6 +14,7 @@ models on the screen, including the Tank and any obstacles.
 '''
 from consts import *
 from game2d import *
+from introcs import *
 
 class Tank(GImage):
     """
@@ -28,8 +29,7 @@ class Tank(GImage):
     - _health: the number of hitpoints [float between 0 and 100 inclusive]
     - _isDead: True if tank has 0 hitpoints, False if not [boolean]
     - _name: the name of the player that controls the tank [string]
-    - _xPos: the x-coordinate of the tank [float]
-    - _yPos: the y-coordinate of the tank [float]
+    - _pos: the x and y-coordinate of the tank [Point2]
     - _image: the image file associated with the tank [string, ends in '.png']
     - _tank: the tank displayed in the game [GImage]
     """
@@ -45,12 +45,11 @@ class Tank(GImage):
         self._health = 100.0
         self._isDead = False
         self._name = tankName
-        self._xPos = xPos
-        self._yPos = yPos
+        self._pos = Point2(xPos, yPos)
         self._image = image
 
         self._tank = GImage(width=GRID_SIZE * 2,height=GRID_SIZE * 2,source=self._image,
-            x=self._xPos,y=self._yPos)
+            x=self._pos.x,y=self._pos.y)
 
     def set_aim(self, power, angle):
         """
@@ -95,9 +94,9 @@ class Tank(GImage):
 
     def get_position(self):
         """
-        Returns the x and y positions of the tank [tuple].
+        Returns the x and y positions of the tank [Point2].
         """
-        return (self._xPos, self._yPos)
+        return self._pos
 
     def draw(self, view):
         """
