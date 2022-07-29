@@ -1,4 +1,4 @@
-# Tank-Game
+# Tank-Game [INCOMPLETE and PAUSED]
 
 ## Summer 2022 Project
 
@@ -7,7 +7,9 @@ __Purpose of Project__
 
 I wanted to put my coding skills in practice over the summer and create my very first game from scratch. By implementing a game such as this, I will be able to learn more about the process of game development and creating interfaces. I will be able to design a game, implement it, and test the game throughout my process, and to make the process streamlined, the creation of the game will be separated into ten milestones to be completed throughout the summer. If I am unable to meet a milestone, I will adjust accordingly. New tasks will be added to milestones when appropriate.
 
-<br>
+I originally created Tank-Game, but I realized that my expectations for the game might have been too much for the Kivy module to handle. I wanted projectiles to fly across the screen in specific arcs depending on the aim of the tank gun. This could have been accomblished through moving the projectile by a small distance for every projectile fired, but this could be made much simpler. I instead decided to opt for the Turtle module, which can draw parabolas for projectiles. Tank-Game-2.0 is now here (https://github.com/camelliaguan3/Tank-Game-2.0).
+
+<hr />
 
 ## How to Run the Game
 
@@ -17,7 +19,7 @@ I wanted to put my coding skills in practice over the summer and create my very 
 
 3. Run `python ../Tank-Game` while in the Tank-Game folder.
 
-<br>
+<hr />
 
 ## Milestones
 
@@ -94,7 +96,7 @@ The *Milestones* section outlines each milestone and their due dates.
 
 > &cross; Complete game :D
 
-<br>
+<hr />
 
 ## Design Choices
 
@@ -110,7 +112,7 @@ During this milestone, I realized that there would likely need to be another cla
 
 **Milestone 6:** Sketches for welcome, gameplay and gameover were added to the sketches folder. I figured out how to calculate the distance between the tank and the mouse cursor to determine the power of the gun, but the angle of the gun seems to be calculated incorrectly from the way that I tried to calculate it, which involves finding the angle between two Vector2 objects. I removed the STATE_PAUSED because it did not make sense for a game that has two players and is local to have a pause feature. Players can technically 'pause' whenever they want by not taking their turn.
 
-<br>
+<hr />
 
 ## Citations
 
